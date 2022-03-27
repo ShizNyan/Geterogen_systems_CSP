@@ -39,9 +39,13 @@ namespace ClientSharpdll
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlConnection2 = new System.Data.SqlClient.SqlConnection();
             this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.sqlConnection2 = new System.Data.SqlClient.SqlConnection();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -121,6 +125,12 @@ namespace ClientSharpdll
             this.sqlSelectCommand1.CommandText = "SELECT * FROM Calculator";
             this.sqlSelectCommand1.Connection = this.sqlConnection2;
             // 
+            // sqlConnection2
+            // 
+            this.sqlConnection2.ConnectionString = "Data Source=DESKTOP-A57A7BM\\MSSQLSERVER_1;Initial Catalog=CSP_geterogen_sys;Integ" +
+    "rated Security=True";
+            this.sqlConnection2.FireInfoMessageEventOnUserErrors = false;
+            // 
             // sqlInsertCommand1
             // 
             this.sqlInsertCommand1.CommandText = "INSERT INTO [Calculator] ([X], [Y], [Result], [Operation]) VALUES (@X, @Y, @Resul" +
@@ -143,17 +153,51 @@ namespace ClientSharpdll
                         new System.Data.Common.DataColumnMapping("Result", "Result"),
                         new System.Data.Common.DataColumnMapping("Operation", "Operation")})});
             // 
-            // sqlConnection2
+            // button3
             // 
-            this.sqlConnection2.ConnectionString = "Data Source=DESKTOP-A57A7BM\\MSSQLSERVER_1;Initial Catalog=CSP_geterogen_sys;Integ" +
-    "rated Security=True";
-            this.sqlConnection2.FireInfoMessageEventOnUserErrors = false;
+            this.button3.Location = new System.Drawing.Point(136, 174);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(83, 34);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "*";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(136, 215);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(83, 34);
+            this.button4.TabIndex = 9;
+            this.button4.Text = ":";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(235, 174);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(83, 34);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "%";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(235, 214);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(83, 34);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "x^y";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 312);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -185,6 +229,10 @@ namespace ClientSharpdll
         private System.Data.SqlClient.SqlConnection sqlConnection2;
         private System.Data.SqlClient.SqlCommand sqlInsertCommand1;
         private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
